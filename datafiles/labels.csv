@@ -1,0 +1,151 @@
+mass encases,Pathology
+difficulty expressing thoughts,Pathology
+dural thickening,Pathology
+extending posteriorly,Pathology
+lateral shift,Pathology
+herniation,Pathology
+mass effect,Pathology
+enhancing extra-axial mass,Pathology
+atypical,Pathology
+meniongioma,Pathology
+ischemic,Pathology
+vessel disease,Pathology
+intracranial hemorrhage,Pathology
+acute infract,Pathology
+venous anomaly,Pathology
+mucosal thickening,Pathology
+occlussion,Pathology
+extraaxial mass,Pathology
+meningioma,Pathology
+metastasis,Pathology
+lymphoma,Pathology
+solitary fibrous,Pathology
+tumor,Pathology
+muscular spasm,Pathology
+cervical lordosis,Pathology
+disc space narrowing,Pathology
+prevertebral,Pathology
+spondylosis,Pathology
+lesion,Pathology
+stenosis,Pathology
+protrusion,Pathology
+hypertrophy,Pathology
+deformity,Pathology
+reactive changes,Pathology
+stenosis,Pathology
+nasopharynx,Anatomical Location
+nasal cavity,Anatomical Location
+posterial,Anatomical Location
+frontal lobe,Anatomical Location
+anterial lobe,Anatomical Location
+parietal lobes,Anatomical Location
+falx,Anatomical Location
+sinus,Anatomical Location
+midline,Anatomical Location
+upper leaves,Anatomical Location
+upper falx,Anatomical Location
+occipital lobe,Anatomical Location
+upper occipital lobe,Anatomical Location
+posterior frontal lobe,Anatomical Location
+sulci,Anatomical Location
+ventricles,Anatomical Location
+cisterns,Anatomical Location
+vertebral,Anatomical Location
+internal cartoid arteries,Anatomical Location
+vertebral cartoid arteries,Anatomical Location
+central skull base,Anatomical Location
+temporal bones,Anatomical Location
+orbits,Anatomical Location
+calvarium,Anatomical Location
+paranasal sinus,Anatomical Location
+antrum,Anatomical Location
+ethimoid,Anatomical Location
+nasal cavity,Anatomical Location
+nasopharynx,Anatomical Location
+dural tail,Anatomical Location
+meningioma,Anatomical Location
+hemangiopericytoma,Anatomical Location
+spine,Anatomical Location
+Spinal cord,Anatomical Location
+grey matter,Anatomical Location
+white matter,Anatomical Location
+subcortical,Anatomical Location
+periventricular ,Anatomical Location
+Cerebellar tonsils,Anatomical Location
+Sagittal,Laterality
+Axial,Laterality
+Coronal,Laterality
+right,Laterality
+bilobed ,Laterality
+left,Laterality
+right-sided,Laterality
+left-sided,Laterality
+laterality,Laterality
+upper,Laterality
+vertebral,Laterality
+internal,Laterality
+posterior,Laterality
+frontal ,Laterality
+paramedial,Laterality
+flair,Imaging technique
+Images,Imaging technique
+FLAIR ,Imaging technique
+STIR,Imaging technique
+no,Negation
+without,Negation
+insignificant,Negation
+unremarkable,Negation
+less likely,Negation
+unobserved,Negation
+Neither,Negation
+brain,Anatomical Location
+the brain,Anatomical Location
+no,Negation
+faucial tonsil,Anatomical Location
+unremarkable,Negation
+thoracic kyphosis,Pathology
+kyphosis,Anatomical Location
+thoracic,Anatomical Location
+is no,Negation
+"normal","Negation"
+"foraminal narrowing","Pathology"
+"neural foraminal narrowing","Pathology"
+"spinal cana","Anatomical Location"
+"neural foraminal stenosis","Pathology"
+"central disc protrusion","Pathology"
+"No significant","Negation"
+"disc desiccation","Pathology"
+"compression fracture","Pathology"
+"is a no","Negation"
+"bone marrow edema","Pathology"
+"No significant","Negation"
+"neural foraminal narrowing","Pathology"
+"cord signal abnormality","Pathology"
+"spinal canal","Anatomical Location"
+"neural foraminal stenosis","Pathology"
+"ventral spinal cord","Anatomical Location"
+"hyperintense lesion","Anatomical Location"
+"hepatic lobe","Anatomical Location"
+"hemangioma","Pathology"
+"hepatic cyst","Pathology"
+"disc bulge","Pathology"
+"disc protrusion","Pathology"
+"localizer sequence","Anatomical Location"
+"diffuse congenital narrowing","Pathology"
+"No ","Negation"
+"ventral thecal sac","Anatomical Location"
+"measuring","Imaging Technique"
+"Prominent reactive changes noted involving the periventricular ","Laterality"
+"irregular","Pathology"
+"distinct nodule","Pathology"
+"pathologically enlarged lymph ","Pathology"
+"central necrosis","Pathology"
+"extranodal extension","Pathology"
+"faucial tonsil","Anatomical Location"
+"paranasal sinus","Anatomical Location"
+"","Negation"
+" unremarkable","Negation"
+"","Pathology"
+"","Laterality"
+" superior-inferior","Anatomical Location"
+" frontal ","Anatomical Location"
