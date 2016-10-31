@@ -8,7 +8,7 @@ server <- function(input, output) {
     progress$set(message = "Loading Annotations..", value = 0)
     Sys.sleep(1)
     on.exit(progress$close())
- 	labels <- read.csv('~/datafiles/uploads/labels.csv')
+ 	labels <- read.csv('~/datafiles/uploads/annotation_assistant_datafiles/labels.csv')
 
   })
  # Read and pre-process files
@@ -313,7 +313,7 @@ server <- function(input, output) {
     df <- data.frame(phrase= input$mydata[1], class= input$mydata[2],row.names = NULL)
     colnames(df) <- NULL
 
-    write.table(df, '~/datafiles/uploads/labels.csv', row.names=FALSE,append=TRUE, sep = ',')
+    write.table(df, '~/datafiles/uploads/annotation_assistant_datafiles/labels.csv', row.names=FALSE,append=TRUE, sep = ',')
     })
   
  writeTable <- function (df, tablename)

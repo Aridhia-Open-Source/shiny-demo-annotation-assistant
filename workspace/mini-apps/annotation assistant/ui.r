@@ -10,7 +10,7 @@ xap.require('data.table')
 
 xap.source('global.R')
 
-setwd('~/datafiles/radiology reports')
+setwd('~/datafiles/uploads/annotation_assistant_datafiles')
 files <- list.files(pattern = "txt$")
 
 
