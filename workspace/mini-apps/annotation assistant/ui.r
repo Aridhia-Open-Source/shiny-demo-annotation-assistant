@@ -40,11 +40,11 @@ shinyUI(fluidPage(
     column(width = 3,
       h4('Select report file'),
       selectInput("files", "", choices = files),
-      checkboxGroupInput('radio','Select Annotation class', choices = c('Pathology' = "pat",
-                                                                             'Anatomical Location' = "loc",
-                                                                             'Laterality' = "lat",
-                                                                             'Negation' = "neg",
-                                                                             'Imaging Technique' = "imaging"))
+      checkboxGroupInput('radio','Select Annotation class', choices = c('Pathology' = "pathology",
+                                                                        'Anatomical Location' = "location",
+                                                                        'Laterality' = "laterality",
+                                                                        'Negation' = "negation",
+                                                                        'Imaging Technique' = "imaging"))
     ),
     column(width = 6,
       h4('Extracted findings'),
