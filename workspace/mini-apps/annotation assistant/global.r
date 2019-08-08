@@ -6,9 +6,7 @@ xap.require(
   "stringdist",
   "RWeka",
   "stringr",
-  "IRanges",
-  "qdap",
-  "data.table"
+  "IRanges"
 )
 
 
