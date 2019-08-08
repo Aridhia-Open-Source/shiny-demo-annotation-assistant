@@ -1,6 +1,5 @@
-library(qdap)
-server <- function(input, output) {
 
+server <- function(input, output, session) {
   
   lab <- reactive({
     # Progress 

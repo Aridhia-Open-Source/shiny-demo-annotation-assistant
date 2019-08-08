@@ -1,3 +1,17 @@
+xap.require(
+  "qdap",
+  "shiny",
+  "tm",
+  "stringdist",
+  "RWeka",
+  "stringr",
+  "GenomicRanges",
+  "qdap",
+  "data.table"
+)
+
+xap.source("global.R")
+
 split_str_by_index <- function(target, index) {
   index <- sort(index)
   substr(rep(target, length(index) + 1),

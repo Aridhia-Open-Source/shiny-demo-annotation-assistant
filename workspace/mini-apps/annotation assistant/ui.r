@@ -1,18 +1,9 @@
-xap.require('shiny')
-xap.require('tm')
 
-xap.require('stringdist')
-xap.require('RWeka')
-xap.require('stringr')
-xap.require('GenomicRanges')
-xap.require('qdap')
-xap.require('data.table')
 
-xap.source('global.R')
+source("global.r")
 
-setwd('~/datafiles/uploads/annotation_assistant_datafiles')
+#setwd('~/datafiles/uploads/annotation_assistant_datafiles')
 files <- list.files(pattern = "txt$")
-
 
 shinyUI(fluidPage(
   
