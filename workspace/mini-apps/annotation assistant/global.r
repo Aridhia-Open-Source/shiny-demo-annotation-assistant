@@ -1,16 +1,23 @@
 xap.require(
+  "rJava",
   "qdap",
   "shiny",
   "tm",
   "stringdist",
   "RWeka",
   "stringr",
-  "GenomicRanges",
+  "IRanges",
   "qdap",
   "data.table"
 )
 
-xap.source("global.R")
+
+if(exists("xap.conn")) {
+  workspace_home <- "~"
+} else {
+  workspace_home <- workspace_path()
+}
+
 
 split_str_by_index <- function(target, index) {
   index <- sort(index)
@@ -43,11 +50,7 @@ getPositions <- function( Terms, Text, drop=TRUE) {
   }
 }  
 
-getPositions_sent <- function( Terms, Text, drop=TRUE) {
-  
-
-    
-  
+getPositions_sent <- function(Terms, Text, drop = TRUE) {
   positions <- aregexec(Terms, Text,  max.distance = 0.1, fixed = TRUE)
   
   
@@ -62,8 +65,6 @@ ClosestMatch2 = function(dataframe, stringVector){
   string <- as.character(dataframe[[3]])
   vector <- as.vector(stringVector[[1]])
   vector[amatch(string, vector, maxDist=1)]
-  
-  
 }
 
 
