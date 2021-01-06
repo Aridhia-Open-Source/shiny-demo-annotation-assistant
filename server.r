@@ -2,11 +2,11 @@
 server <- function(input, output, session) {
   
   lab <- reactive(withProgress(message = "Loading Annotations", {
- 	  labels <- read.csv(paste0(workspace_home, "/datafiles/annotation_assistant_datafiles/labels.csv"))
+ 	  labels <- read.csv("data/labels.csv")
   }))
   
   file_input <- reactive({
-    paste0(workspace_home, "/datafiles/annotation_assistant_datafiles/", input$files)
+    file.path("data", input$files)
   })
   
  # Read and pre-process files
@@ -195,7 +195,7 @@ server <- function(input, output, session) {
     df <- data.frame(phrase = input$mydata[1], class = input$mydata[2], row.names = NULL)
     colnames(df) <- NULL
 
-    write.table(df, paste0(workspace_home, "/datafiles/annotation_assistant_datafiles/labels.csv"), row.names = FALSE, append = TRUE, sep = ",")
+    write.table(df, "data/labels.csv", row.names = FALSE, append = TRUE, sep = ",")
   })
   
   writeTable <- function (df, tablename) {

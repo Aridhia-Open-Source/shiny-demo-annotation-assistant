@@ -1,20 +1,12 @@
-xap.require(
-  "rJava",
-  "qdap",
-  "shiny",
-  "tm",
-  "stringdist",
-  "RWeka",
-  "stringr",
-  "IRanges"
-)
 
-
-if(exists("xap.conn")) {
-  workspace_home <- "~"
-} else {
-  workspace_home <- workspace_path()
-}
+library(shiny)
+library(rJava)
+library(qdap)
+library(tm)
+library(stringdist)
+library(RWeka)
+library(stringr)
+library(IRanges)
 
 
 split_str_by_index <- function(target, index) {

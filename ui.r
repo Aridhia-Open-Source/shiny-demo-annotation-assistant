@@ -1,11 +1,8 @@
 
-
-source("global.r")
-
-files_path <- paste0(workspace_home, "/datafiles/annotation_assistant_datafiles")
+files_path <- paste0("data")
 files <- list.files(files_path, pattern = "txt$")
 
-shinyUI(fluidPage(
+ui <- fluidPage(
   #### Styling ####
   theme = "theme.css",
   
@@ -60,4 +57,4 @@ shinyUI(fluidPage(
       )
     )
   )
-))
+)
