@@ -4,7 +4,7 @@ documentation_tab <- function() {
                      fluidRow(column(
                        6,
                        h3("Radiology Annotation Assistant"), 
-                       p("This RShiny mini-app uses simple text mining techniques to extract structured information from free text radiology reports. **Unstructured data**, 
+                       p("This RShiny mini-app uses simple text mining techniques to extract structured information from free text radiology reports. Unstructured data, 
                        such as free text, froms nearly 80% of the world's data; this is data that does not have a pre-defined data model, which makes it very difficult to analyse 
                        using conventional programs. Text Mining Techniques are used to analyse and process unstructured data in order to retrieve high-quality information from text. 
                          Thus, through text mining techniques it is possible to transform unstructured data into structured data for easy analysis."),
