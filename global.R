@@ -1,4 +1,8 @@
+####################
+###### GLOBAL ######
+####################
 
+# Load libraries
 library(shiny)
 library(rJava)
 library(qdap)
@@ -8,7 +12,14 @@ library(RWeka)
 library(stringr)
 library(IRanges)
 
+# Defining file path
+files_path <- paste0("data")
+files <- list.files(files_path, pattern = "txt$")
 
+# Source help tab
+source('help_tab.R')
+
+# Defining functions needed for the app
 split_str_by_index <- function(target, index) {
   index <- sort(index)
   substr(rep(target, length(index) + 1),

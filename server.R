@@ -1,3 +1,7 @@
+####################
+###### SERVER ######
+####################
+
 
 server <- function(input, output, session) {
   
@@ -22,14 +26,7 @@ server <- function(input, output, session) {
   
   # Extract Name, DOB, Exam type
   patientInfo <- reactive(withProgress(message = "Extracting Patient info...", value = 0, {
-    #txt <- readText()
-    #name <- trimws(as.character(genXtract(txt, 'PATIENT: ', 'DOB:', with = FALSE)))[1]
-    #dob <- trimws(as.character(genXtract(txt, 'DOB: ', 'FILE', with = FALSE)))[1]
-    #exam <- trimws(as.character(genXtract(txt, 'EXAM: ', 'DATE:', with = FALSE)))[1]
-    #df <- data.frame(c(name,dob,exam), row.names = c('Name','DOB','Exam'))
-    
-    #colnames(df) <- NULL
-    #df
+
     dat <- switch(input$files,
                   "brain-mri-sample-report-1.txt" = c("pat_001", "Gandalf", "Brain MRI"),
                   "neck-mri-with-andwithout-contrast-sample-report-1.txt" = c("pat_002", "Aragorn", "Neck MRI"),
@@ -199,8 +196,7 @@ server <- function(input, output, session) {
   })
   
   writeTable <- function (df, tablename) {
-    dbWriteTable(xap.conn, c(xap.db.sandbox, tablename), as.data.frame(df), 
-                 row.names = F, overwrite = F, append = TRUE)
+    write.csv(df, tablename, row.names = FALSE)
   }
   
   onoClick <- observeEvent(input$writeDB, {
@@ -209,7 +205,7 @@ server <- function(input, output, session) {
       return()
     }
 
-    tableName <- "radiology_text_findings"
+    tableName <- "./results/radiology_text_findings.csv"
     pat <- t(patientInfo())
     
     output <- removeNeg()

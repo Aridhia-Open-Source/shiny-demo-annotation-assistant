@@ -1,6 +1,7 @@
+################
+###### UI ######
+################
 
-files_path <- paste0("data")
-files <- list.files(files_path, pattern = "txt$")
 
 ui <- fluidPage(
   #### Styling ####
@@ -30,31 +31,47 @@ ui <- fluidPage(
 		  .imaging 	  {background: rgba(255,99,71, 0.5);}                         
     "))
   ),
+  #### End of Styling ####
   
   # Application title
-  titlePanel("Radiology Report annotation assistant"),
-  fluidRow(
-    column(width = 3,
-      h4('Select report file'),
-      selectInput("files", "", choices = files),
-      checkboxGroupInput('radio','Select Annotation class', choices = c('Pathology' = "pathology",
-                                                                        'Anatomical Location' = "location",
-                                                                        'Laterality' = "laterality",
-                                                                        'Negation' = "negation",
-                                                                        'Imaging Technique' = "imaging"))
-    ),
-    column(width = 6,
-      h4('Extracted findings'),
-      uiOutput('text')
-    ),
-    column(width = 3,
-      verticalLayout(
-        h4('Extracted patient info'),
-        tableOutput('patient'),
-        h4('Retrieved findings output'),
-        tableOutput('matchTable'),
-        actionButton('writeDB', 'Export findings')  
+  titlePanel("Radiology Report Annotation Assistant"),
+  tabsetPanel(
+    ### APP TAB ###
+    tabPanel("App",
+      fluidRow(
+        column(width = 3,
+               h4('Select report file'),
+               # Select report file
+               selectInput("files", "", choices = files),
+               # Select Annotation class to be highlighted
+               checkboxGroupInput('radio','Select Annotation class', choices = c('Pathology' = "pathology",
+                                                                                 'Anatomical Location' = "location",
+                                                                                 'Laterality' = "laterality",
+                                                                                 'Negation' = "negation",
+                                                                                 'Imaging Technique' = "imaging"))
+        ),
+        # Text with findings
+        column(width = 6,
+               h4('Extracted findings'),
+               uiOutput('text')
+        ),
+        # Patient info and retrieved findings
+        column(width = 3,
+               verticalLayout(
+                 h4('Extracted patient info'),
+                 tableOutput('patient'),
+                 h4('Retrieved findings output'),
+                 tableOutput('matchTable'),
+                 actionButton('writeDB', 'Export findings')  
+               )
+        )
       )
-    )
+    ### END OF APP TAB ###
+    ),
+    
+    ### HELP TAB ###
+    documentation_tab()
+    ### END OF HELP TAB ###
   )
+
 )
