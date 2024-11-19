@@ -22,7 +22,7 @@ To use this RShiny mini-app:
 You can clone this repository by using the command:
 
 ```
-git clone https://github.com/aridhia/demo-annotation-assistant
+git clone https://github.com/Aridhia-Open-Source/shiny-demo-annotation-assistant
 ```
 
 Open the .Rproj file in RStudio and use `runApp()` to start the app.
